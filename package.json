@@ -1,0 +1,13 @@
+{
+  "name": "docker-meanstack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/index.js",
+  "scripts": {
+    "start": "npm run --prefix server start",
+    "build": "cd client && npm run build",
+    "test": "npm run --prefix server test && npm run --prefix client test"
+  },
+  "author": "Christian Lüdemann",
+  "license": "MIT"
+}
