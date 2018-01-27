@@ -10,7 +10,7 @@ exports = module.exports = function(app) {
     // All other routes should redirect to the index.html
     app.route('/*')
       .get((req, res) => {
-        res.sendFile(path.resolve('../client/dist') + '/index.html');
+        res.sendFile(path.resolve('./static/dist') + '/index.html');
       });
   }
   
