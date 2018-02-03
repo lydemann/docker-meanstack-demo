@@ -2,21 +2,19 @@ version: '3' # specify docker-compose version
 
 # Define the services/containers to be run
 services:
-  waf:
-    links:
-    - app
-    depends_on:
-    - app
-    image: chld/waf:1.0
+  client:
+    build: ./client
     ports:
-        - "80:80"
-  app: # name of the first service
+      - "80:4200"
+  server: # name of the first service
     logging:
       driver: "json-file"
       options:
         max-size: "200k"
         max-file: "10"
-    build: . # specify the directory of the Dockerfile
+    build: ./server # specify the directory of the Dockerfile
+    ports:
+      - "8080:8080"
     environment:
       - MONGO_URL=mongodb://database/mean-app
     links:

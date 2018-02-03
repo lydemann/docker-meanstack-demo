@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const config = require('./config');
 
 exports = module.exports = function(app) {
 
@@ -9,10 +10,5 @@ exports = module.exports = function(app) {
 
     app.use(express.static(staticFilesPath))
 
-    // All other routes should redirect to the index.html
-    app.route('/*')
-      .get((req, res) => {
-        res.sendFile(staticFilesPath + '/index.html');
-      });
   }
   

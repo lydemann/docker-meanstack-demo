@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build:static": "cd .. && cd client && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "mongoose": "^5.0.1",
     "path": "^0.12.7"
