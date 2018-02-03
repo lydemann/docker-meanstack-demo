@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const config = require('./config');
 
 exports = module.exports = function(app) {
 
@@ -10,5 +9,5 @@ exports = module.exports = function(app) {
 
     app.use(express.static(staticFilesPath))
 
-  }
+}
   
