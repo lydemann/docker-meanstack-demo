@@ -6,8 +6,5 @@ exports = module.exports = function(app) {
     const staticFilesPath = path.resolve('./static');
   
     app.get('/hello', (req, res) => res.send('Hello World!'))
-
-    app.use(express.static(staticFilesPath))
-
 }
   
